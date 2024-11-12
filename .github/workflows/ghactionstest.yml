@@ -1,0 +1,15 @@
+on:
+    pull_request:
+      types:
+        - opened
+        - reopened
+        - synchronize
+        - closed
+ 
+  jobs:
+    deploy-review-app:
+      runs-on: ubuntu-latest
+      steps:
+        - run: "echo '${{ github.actor }}'"
+          if: contains(github.actor, fromJson('["bohdan-shulha", "dependabot[bot]", "github-actions[bot]"]'))
+        - run: echo "I am authorized to deploy review apps!"
