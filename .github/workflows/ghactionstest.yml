@@ -13,4 +13,4 @@ jobs:
       - run: "echo '${{ github.actor }}'"
         if: contains(github.actor, fromJson('["bohdan-shulha", "dependabot[bot]", "github-actions[bot]"]'))
       - run: echo "I am authorized to deploy review apps!"
-      - run: "echo '${{ github.event }}'"
+      - run: "echo '${{ toJson(github.event) }}'"
