@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0 (2024-11-13)
+
+
+### Features
+
+* [#1](https://github.com/ptah-sh/deploy-review-app-action/issues/1) v0 of review app deployment ([17beaec](https://github.com/ptah-sh/deploy-review-app-action/commit/17beaec7cbf3a086532f987284de9e915934e3d1))
+
 ## [1.1.1](https://github.com/ptah-sh/deploy-action/compare/v1.1.0...v1.1.1) (2024-08-25)
 
 
