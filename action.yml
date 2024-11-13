@@ -1,0 +1,34 @@
+name: "Deploy Review App to Ptah.sh"
+description: "Launches a new review app deployment to the Docker Swarm cluster managed by Ptah.sh"
+inputs:
+  apiKey:
+    description: "API Key for authentication"
+    required: true
+  service:
+    description: "The service to deploy"
+    required: true
+  ref:
+    description: "The reference to the branch, commit or pull request"
+    required: true
+  refUrl:
+    description: "The URL to the reference"
+    required: true
+  process:
+    description: "YAML object containing process configuration"
+    required: true
+  worker:
+    description: "YAML object containing worker configuration"
+    required: true
+  serverAddress:
+    description: "Custom server address (optional)"
+    required: false
+    default: "https://ctl.ptah.sh"
+outputs:
+  deploymentId:
+    description: "The ID of the initiated deployment"
+runs:
+  using: node20
+  main: "dist/index.js"
+branding:
+  icon: 'upload-cloud'
+  color: 'blue'
