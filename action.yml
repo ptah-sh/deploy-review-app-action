@@ -1,6 +1,9 @@
 name: "Deploy Review App to Ptah.sh"
 description: "Launches a new review app deployment to the Docker Swarm cluster managed by Ptah.sh"
 inputs:
+  githubToken:
+    description: "GitHub token for authentication"
+    required: true
   apiKey:
     description: "API Key for authentication"
     required: true

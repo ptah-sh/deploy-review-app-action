@@ -88,7 +88,9 @@ async function run() {
       console.log(`Review app deployment initiated successfully. Link: ${reviewAppsPageUrl}`);
       console.log(`Visit: ${visitUrl}`);
 
-      const comments = await github.getOctokit().rest.issues.listComments({
+      const octokit = github.getOctokit(githubToken);
+
+      const comments = await octokit.rest.issues.listComments({
         owner: github.context.repo.owner,
         repo: github.context.repo.repo,
         issue_number: github.context.issue.number,
@@ -101,12 +103,12 @@ async function run() {
       const comment = comments.data.find(comment => comment.body.includes(title));
 
       if (comment) {
-        await github.getOctokit().rest.issues.updateComment({
+        await octokit.rest.issues.updateComment({
           comment_id: comment.id,
           body: formatComment(title, visitUrl)
         });
       } else {
-        await github.getOctokit().rest.issues.createComment({
+        await octokit.rest.issues.createComment({
           issue_number: github.context.issue.number,
           owner: github.context.repo.owner,
           repo: github.context.repo.repo,
