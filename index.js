@@ -35,7 +35,7 @@ function validateInputs({ service, ref, refUrl, process, worker }) {
 
 async function run() {
   try {
-    // Get inputs
+    const githubToken = core.getInput("githubToken", { required: true });
     const apiKey = core.getInput("apiKey", { required: true });
     const service = core.getInput("service", { required: true });
     const ref = core.getInput("ref", { required: true });
