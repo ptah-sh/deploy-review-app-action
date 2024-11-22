@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/ptah-sh/deploy-review-app-action/compare/v1.1.0...v1.1.1) (2024-11-22)
+
+
+### Bug Fixes
+
+* [#1](https://github.com/ptah-sh/deploy-review-app-action/issues/1) require github token 2 ([719f849](https://github.com/ptah-sh/deploy-review-app-action/commit/719f849281edbc671acfc0119e9406830349bd42))
+
 ## [1.1.0](https://github.com/ptah-sh/deploy-review-app-action/compare/v1.0.0...v1.1.0) (2024-11-22)
 
 

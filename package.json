@@ -1,6 +1,6 @@
 {
   "name": "@ptah-sh/deploy-review-app-action",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A GitHub action to deploy review apps to Ptah.sh",
   "main": "dist/index.js",
   "scripts": {
